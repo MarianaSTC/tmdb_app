@@ -318,3 +318,17 @@ def preprocess_image(image_path, target_size):
     return img_array
 """
     st.code(code1, language="python")
+
+elif choice == 'Conclusion':
+    st.header("Résultat")
+    # Créez trois colonnes
+    col1, col2, col3 = st.columns([1,2,1])
+
+# Utilisez la colonne du milieu pour afficher l'image, ce qui la centrera relativement
+    with col2:
+        st.image(r"C:\Users\maria\Desktop\tmdb_dl\image.png", width=700)
+        st.caption("""Métriques de performances""")
+        st.markdown("""Le tableau affiche différentes métriques de performance pour chacune des classes du modèle, ainsi que des moyennes globales. 
+                        Il semble que certaines classes (comme les indices 0, 17, 18) aient particulièrement de faibles performances. Cela pourrait être dû à un manque de données d'entraînement 
+                    pour ces classes ou à des caractéristiques moins discriminantes apprises par le modèle pour ces classes. 
+                    Les moyennes montrent également que, globalement, le modèle pourrait avoir besoin d'améliorations pour mieux généraliser ou pour mieux gérer les classes déséquilibrées.""")
